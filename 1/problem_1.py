@@ -19,3 +19,6 @@ elves_food = [list(map(int, elf_cal.split("\n"))) for elf_cal in lines.split("\n
 elves_total_cal = list(map(sum, elves_food))
 max_cal = max(elves_total_cal)
 print(f"Maximum calories held by a single elf: {max_cal}")
+
+top_3_calories_total = sum(sorted(elves_total_cal, reverse=True)[0:3])
+print(f"Total calories held by 3 most calorie-rich elves: {top_3_calories_total}")
